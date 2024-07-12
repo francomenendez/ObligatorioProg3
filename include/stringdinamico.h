@@ -2,6 +2,7 @@
 #define STRINGDINAMICO_H_INCLUDED
 #include<stdio.h>
 #include "boolean.h"
+
 const int MAX=80;
 typedef char * string;
 
@@ -13,7 +14,7 @@ void print (string str);
 
 void print2 (string str, int n);
 
-void CargarComando (string &str);
+void cargarString (string &str);
 
 boolean strmen(string str, string str2);
 
@@ -36,6 +37,8 @@ boolean Existe (string nom);
 boolean SoloLetras (string str);
 
 boolean SoloNumeros (string str);
+
+boolean SoloAlfaNumerico (string str);
 
 boolean EsArchivo (string str);
 

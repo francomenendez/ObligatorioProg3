@@ -3,7 +3,7 @@
 
 #include "stringdinamico.h"
 
-const int N = 30;
+const int N=5;
 typedef struct { 
     string arre[N];
     int tope;
@@ -17,10 +17,18 @@ void InsertarCiudades (Ciudades &C, string str);
 
 boolean EsVaciaCiudades (Ciudades C); 
 
-int Largo (Ciudades C);
+boolean EsLlenaCiudades (Ciudades C);
 
-void DesplegarCiudades (Ciudades C); 
+int LargoCiudades (Ciudades C); 
 
-void EliminarCiudades (Ciudades &C, int num); 
+void DevolverCiudad (Ciudades C, int num, string &str);
+
+int DevolverNumCiudad (Ciudades C, string str);
+
+///////////
+
+void RegistrarCiudad (Ciudades &C, string str);
+
+void DesplegarCiudades (Ciudades C);
 
 #endif

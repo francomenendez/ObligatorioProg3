@@ -1,15 +1,15 @@
 #include "StringDinamico.h"
 
 void StrCrear (string &str){
- str= new char[1];
- str[0]='\0';
+    str= new char[1];
+    str[0]='\0';
 }
 
 int strlar (string str){
 int i=0, largo=0;
 while(str[i]!='\0' && i<MAX-1){
-   largo++;
-   i++;
+    largo++;
+    i++;
 }
 return(largo);
 }
@@ -30,13 +30,13 @@ while(str[i]!='\0' && i<MAX && i<n){
 }
 
 
-void CargarComando (string &str){
- StrCrear(str);
- string aux=new char [MAX];
- char c;
- int i = 0;
- fflush (stdin);
- scanf ("%c", &c);
+void cargarString (string &str){
+    StrCrear(str);
+    string aux=new char [MAX];
+    char c;
+    int i = 0;
+    fflush (stdin);
+    scanf ("%c", &c);
 while (c != '\n' && i < MAX-1){
     aux[i] = c;
     i++;
@@ -194,6 +194,18 @@ boolean SoloNumeros (string str) {
             num=FALSE;
     }
     return num;
+}
+
+boolean SoloAlfaNumerico (string str) {
+    int i=0;
+    boolean alfnum=TRUE;
+    while(str[i]!= '\0' && alfnum) {
+        if( ( str[i]>='A' && str[i]<='Z' ) || ( str[i]>='a' && str[i]<='z') || (str[i]>='0' && str[i]<='9') )
+            i++;
+        else
+            alfnum=FALSE;
+    }
+    return alfnum;
 }
 
 // Precondicion: el string solo tiene letras y el punto
